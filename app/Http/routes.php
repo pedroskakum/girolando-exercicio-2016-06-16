@@ -14,12 +14,6 @@
 //onde será exibido o formulário para login
 Route::resource('/', 'HomeController', ['only' => ['index'] ]);
 
-//acessar a rota 'autenticar' somente se não estiver autenticado
-/*Route::filter('guest', function()
-{
-    if (Auth::check()) return Redirect::route('/')->with('flash_notice', 'Você já está logado!');
-});*/
-
 //onde irá receber os dados do formulário para realização do login
 Route::resource('/autenticar', 'LoginController', ['only' => ['store']]);
 
