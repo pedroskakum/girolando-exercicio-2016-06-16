@@ -30,6 +30,7 @@ class LoginController extends Controller
         $usuario = $this->databaseManager
             ->table('usuarios')
             ->where("telefoneUsuario", $telefoneUsuario)
+            ->where("statusUsuario", 1)
             ->first();
 
 
